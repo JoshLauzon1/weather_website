@@ -52,8 +52,6 @@ const apiKey = 'YOUR_API_KEY';
 
 ## Screenshots 📸
 
-[You can add screenshots of your app here]
-
 ## Future Enhancements 🔮
 
 - 5-day weather forecast
