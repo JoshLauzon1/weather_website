@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Josh's Weather App</h1>
+        <div class="search">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <div class="weather-info" id="weather-info">
+            <h2 id="city-name"></h2>
+            <div id="temperature"></div>
+            <div id="description"></div>
+            <div class="weather-details">
+                <div class="detail-item">
+                    <i class="fas fa-thermometer-half"></i>
+                    <div>
+                        <span class="label">Feels like</span>
+                        <span id="feels-like"></span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-droplet"></i>
+                    <div>
+                        <span class="label">Humidity</span>
+                        <span id="humidity"></span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-gauge-high"></i>
+                    <div>
+                        <span class="label">Wind</span>
+                        <span id="wind-speed"></span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-compress-alt"></i>
+                    <div>
+                        <span class="label">Pressure</span>
+                        <span id="pressure"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
