@@ -1,74 +1,53 @@
 # Josh's Weather App 🌤️
 
-A sleek and modern weather application that provides real-time weather information for any city worldwide. Built with HTML, CSS, and JavaScript, utilizing the OpenWeatherMap API.
+A modern, full-featured weather application with real-time weather data and interactive radar visualization. Built with vanilla JavaScript and integrated with free weather APIs.
 
 ## Features 🌟
 
-- Real-time weather data
-- Clean and responsive design
-- Detailed weather information including:
-- Current temperature
-- "Feels like" temperature
-- Humidity levels
-- Wind speed
-- Atmospheric pressure
-- Search for any city globally
-- Smooth animations and hover effects
-- Mobile-friendly interface
+### Weather Data
+- **Real-time weather information** for any city worldwide
+- **Current location detection** with geolocation support  
+- **Comprehensive weather details**: temperature, feels-like, humidity, pressure, wind speed
+- **Weather descriptions** with intuitive icons
+
+### Interactive Radar
+- **Live weather radar** with precipitation overlay
+- **Animated radar loops** showing storm movement and intensity
+- **Interactive map** with zoom and pan functionality
+- **Real-time radar data** updated every few minutes
+
+### User Experience
+- **Responsive design** optimized for desktop and mobile
+- **Smooth animations** and modern UI
+- **Error handling** with user-friendly messages
+- **Clean, intuitive interface** with easy navigation
 
 ## Technologies Used 💻
 
-- HTML5
-- CSS3
-- JavaScript
-- [OpenWeatherMap API](https://openweathermap.org/api)
-- Font Awesome Icons
-- Google Fonts (Poppins)
+- **Frontend**: HTML5, CSS3, Vanilla JavaScript
+- **Weather API**: OpenMeteo (free, no API key required)
+- **Radar Data**: RainViewer API (free radar tiles)
+- **Mapping**: Leaflet.js with OpenStreetMap
+- **Styling**: Font Awesome Icons, Google Fonts (Poppins)
 
-## Setup and Installation 🚀
+## Quick Start 🚀
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/weather-app.git
-```
+1. Clone or download the repository
+2. Open `index.html` in your web browser
+3. Search for any city or use your current location
+4. View weather data and interactive radar
 
-2. Get your API key:
-   - Sign up at [OpenWeatherMap](https://openweathermap.org/)
-   - Navigate to your account's "API Keys" section
-   - Copy your API key
+*No API keys required - uses free weather services*
 
-3. Replace the API key in `script.js`:
-```javascript
-const apiKey = 'YOUR_API_KEY';
-```
+## Project Highlights �
 
-4. Open `index.html` in your web browser
+This project demonstrates:
+- **API integration** with multiple weather services
+- **Interactive mapping** with real-time data visualization  
+- **Responsive web design** with modern CSS techniques
+- **Error handling** and user experience optimization
+- **Modular JavaScript** architecture
 
-## Usage 📱
+---
 
-1. Enter a city name in the search box
-2. Press Enter or click the search button
-3. View detailed weather information for the specified city
-
-## Future Enhancements 🔮
-
-- 5-day weather forecast
-- Weather maps integration
-- Temperature unit conversion (Celsius/Fahrenheit)
-- Geolocation support
-- Weather alerts
-- Dark/Light theme toggle
-
-## License 📝
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments 👏
-
-- OpenWeatherMap for providing the weather data API
-- Font Awesome for the icons
-- Google Fonts for the Poppins font family
-
-## Contact 📧
-
-Josh Lauzon - lauzonj1@msu.edu
+**Josh Lauzon** - lauzonj1@msu.edu

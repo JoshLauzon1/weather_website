@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <div class="container">
@@ -52,13 +52,32 @@
                         <span class="label">Pressure</span>
                         <span id="pressure"></span>
                     </div>
+                </div>            </div>
+        </div>
+        
+        <!-- Radar Section -->
+        <div class="radar-section" id="radar-section" style="display: none;">
+            <div class="radar-header">
+                <h3><i class="fas fa-satellite-dish"></i> Weather Radar</h3>
+                <div class="radar-controls">
+                    <button id="radar-play-btn" class="radar-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button id="radar-toggle-btn" class="radar-btn">
+                        <i class="fas fa-eye-slash"></i> Hide Radar
+                    </button>
                 </div>
             </div>
+            <div class="radar-container">
+                <div id="radar-map"></div>
+                <div class="radar-timestamp" id="radar-timestamp"></div>
+            </div>
         </div>
+        
         <div id="loading" class="loading" style="display: none;">
             <div class="spinner"></div>
-        </div>
-    </div>
+        </div>    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
