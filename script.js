@@ -788,10 +788,16 @@ function updateHistoricalDisplay(type, currentValue, historicalData, unit) {
     
     // Display historical range
     let rangeText = '';
-    if (historicalData.min !== null && historicalData.max !== null) {
+    if (historicalData.min !== undefined && historicalData.max !== undefined && 
+        historicalData.min !== null && historicalData.max !== null) {
+        // Has both min and max (like temperature, humidity, pressure)
         rangeText = `Avg: ${historicalData.average}${unit} (${historicalData.min}-${historicalData.max}${unit})`;
+    } else if (historicalData.overallMin !== undefined && historicalData.overallMax !== undefined) {
+        // Has overall range (like wind speed - only daily maximums)
+        rangeText = `Avg: ${historicalData.average}${unit} (range: ${historicalData.overallMin}-${historicalData.overallMax}${unit})`;
     } else {
-        rangeText = `Avg: ${historicalData.average}${unit} (${historicalData.overallMin}-${historicalData.overallMax}${unit})`;
+        // Fallback - just show average
+        rangeText = `Avg: ${historicalData.average}${unit}`;
     }
     
     rangeElement.textContent = rangeText;
