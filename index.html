@@ -13,10 +13,9 @@
         <h1>Josh's Weather App</h1>
         <div class="search">
             <input type="text" id="city-input" placeholder="Enter city name">
-            <button id="search-btn">
+            <button id="search-btn"> 
                 <i class="fas fa-search"></i>
-            </button>
-            <button id="location-btn" title="Use current location">
+            </button>            <button id="location-btn" title="Use current location">
                 <i class="fas fa-location-arrow"></i>
             </button>
         </div>
@@ -51,20 +50,59 @@
                     <div>
                         <span class="label">Pressure</span>
                         <span id="pressure"></span>
-                    </div>
-                </div>            </div>
+                    </div>                </div>            </div>
         </div>
         
-        <!-- Radar Section -->
+        <!-- Historical Data Section -->
+        <div class="historical-section" id="historical-section" style="display: none;">
+            <h3><i class="fas fa-chart-line"></i> Historical Averages</h3>
+            <div class="historical-grid">
+                <div class="historical-item">
+                    <span class="historical-label">Temperature</span>
+                    <div class="historical-values">
+                        <span class="current-temp" id="current-temp-hist"></span>
+                        <span class="historical-range" id="temp-range"></span>
+                    </div>
+                </div>
+                <div class="historical-item">
+                    <span class="historical-label">Humidity</span>
+                    <div class="historical-values">
+                        <span class="current-temp" id="current-humidity-hist"></span>
+                        <span class="historical-range" id="humidity-range"></span>
+                    </div>
+                </div>
+                <div class="historical-item">
+                    <span class="historical-label">Wind Speed</span>
+                    <div class="historical-values">
+                        <span class="current-temp" id="current-wind-hist"></span>
+                        <span class="historical-range" id="wind-range"></span>
+                    </div>
+                </div>
+                <div class="historical-item">
+                    <span class="historical-label">Pressure</span>
+                    <div class="historical-values">
+                        <span class="current-temp" id="current-pressure-hist"></span>
+                        <span class="historical-range" id="pressure-range"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!-- Radar Section -->
         <div class="radar-section" id="radar-section" style="display: none;">
             <div class="radar-header">
                 <h3><i class="fas fa-satellite-dish"></i> Weather Radar</h3>
                 <div class="radar-controls">
+                    <select id="radar-type-select" class="radar-dropdown">
+                        <option value="nowcast">Present Forecast (2 hours)</option>
+                        <option value="12hour">12 Hour Forecast</option>
+                        <option value="24hour">24 Hour Forecast</option>
+                    </select>
                     <button id="radar-play-btn" class="radar-btn">
                         <i class="fas fa-play"></i>
                     </button>
                     <button id="radar-toggle-btn" class="radar-btn">
                         <i class="fas fa-eye-slash"></i> Hide Radar
+                        
                     </button>
                 </div>
             </div>
@@ -74,9 +112,17 @@
             </div>
         </div>
         
+        <!-- Show Radar Button (appears when radar is hidden) -->
+        <div class="show-radar-section" id="show-radar-section" style="display: none;">
+            <button id="show-radar-btn" class="show-radar-btn">
+                <i class="fas fa-satellite-dish"></i> Show Weather Radar
+            </button>
+        </div>
+        </div>
+        
         <div id="loading" class="loading" style="display: none;">
             <div class="spinner"></div>
-        </div>    </div>
+        </div></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>

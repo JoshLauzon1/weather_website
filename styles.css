@@ -256,6 +256,8 @@ h1 {
 .radar-controls {
     display: flex;
     gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .radar-btn {
@@ -310,6 +312,142 @@ h1 {
     z-index: 1000;
 }
 
+/* Radar Dropdown Styles */
+.radar-dropdown {
+    background: #fff;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 0.5rem;
+}
+
+.radar-dropdown:hover {
+    border-color: #2980b9;
+    box-shadow: 0 2px 5px rgba(52, 152, 219, 0.2);
+}
+
+.radar-dropdown:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3);
+}
+
+/* Show Radar Button Styles */
+.show-radar-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.show-radar-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.show-radar-btn:hover {
+    background: linear-gradient(135deg, #2980b9, #21618c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.show-radar-btn i {
+    font-size: 1.1rem;
+}
+
+/* Historical Data Section Styles */
+.historical-section {
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.historical-section h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.historical-section h3 i {
+    margin-right: 0.5rem;
+    color: #e67e22;
+}
+
+.historical-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.historical-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border-left: 4px solid #e67e22;
+}
+
+.historical-label {
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.historical-values {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+}
+
+.current-temp {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.historical-range {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.above-average {
+    color: #e74c3c !important;
+}
+
+.below-average {
+    color: #3498db !important;
+}
+
+.average {
+    color: #27ae60 !important;
+}
+
+.loading-historical {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+    padding: 1rem;
+}
+
 /* Mobile Responsiveness for Radar */
 @media (max-width: 768px) {
     .radar-container {
@@ -325,6 +463,19 @@ h1 {
     .radar-controls {
         align-self: stretch;
         justify-content: center;
+    }
+}
+
+/* Mobile Responsiveness for Historical Data */
+@media (max-width: 768px) {
+    .historical-item {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .historical-values {
+        align-items: center;
     }
 }
 
