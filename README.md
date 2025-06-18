@@ -7,11 +7,11 @@ A sleek and modern weather application that provides real-time weather informati
 - Real-time weather data
 - Clean and responsive design
 - Detailed weather information including:
-  - Current temperature
-  - "Feels like" temperature
-  - Humidity levels
-  - Wind speed
-  - Atmospheric pressure
+- Current temperature
+- "Feels like" temperature
+- Humidity levels
+- Wind speed
+- Atmospheric pressure
 - Search for any city globally
 - Smooth animations and hover effects
 - Mobile-friendly interface
@@ -50,8 +50,6 @@ const apiKey = 'YOUR_API_KEY';
 2. Press Enter or click the search button
 3. View detailed weather information for the specified city
 
-## Screenshots 📸
-
 ## Future Enhancements 🔮
 
 - 5-day weather forecast
@@ -60,14 +58,6 @@ const apiKey = 'YOUR_API_KEY';
 - Geolocation support
 - Weather alerts
 - Dark/Light theme toggle
-
-## Contributing 🤝
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## License 📝
 
